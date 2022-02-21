@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun May 23 23:07:09 2021
+
+@author: Administrator
+"""
+
+
+seq = ''
+for line in open('genome.txt'):
+    if line[0] != '>':
+        seq = seq + line.strip()
+print(seq)
+
+for i in range(0, len(seq)-4+1, 1):
+    k_mer = seq[i:i+4]
+    print(k_mer)
